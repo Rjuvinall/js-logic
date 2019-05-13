@@ -17,7 +17,6 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
   return "Get back to coding!";
 };*/
 
-console.log('test';)
 
 /*
  * #1
@@ -30,7 +29,14 @@ console.log('test';)
  * The function will return true if the number passed into the function is equal to or greater than Hawaii's voting age. Console.log your result.
 */
 
-
+function canVote(age){
+  if (age >= 18){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log(canVote(17));
 /*
  * #2
  * Function - login
@@ -43,6 +49,12 @@ console.log('test';)
  * Console.log your result.
 */
 
+function login(password){
+  if (password === 'test1234'){
+    return 'Login Success!';
+  }
+} 
+console.log(login('test1234'));
 
 /*
  * #3
@@ -56,8 +68,12 @@ console.log('test';)
  * The function will return true if the first number is greater than the second.
  * Console.log your result.
 */
-
-
+function isGreaterThan(first, second){
+  if (first > second){
+    return true;
+  }
+}
+console.log(isGreaterThan(4, 1));
 
 /*
  * #4
@@ -71,7 +87,12 @@ console.log('test';)
  * Console.log your result.
 */
 
-
+function mustBeTrue(boo){
+  if (boo === true){
+    return true
+  }
+}
+console.log(mustBeTrue(true));
 
 /*
  * #5
@@ -85,7 +106,12 @@ console.log('test';)
  * Console.log your result.
 */
 
-
+function bigBird(word){
+  if (word.length === 3){
+    return 'Word to Big Bird';
+  }
+}
+console.log(bigBird('big'));
 
 /*
  * #6
@@ -100,7 +126,15 @@ console.log('test';)
  * Console.log your result.
 */
 
+function isEqual(first, second){
+  if (first === second){
+    return 'You look mahvelous';
+  }else{
+    return 'I dont know who you are anymore';
+  }
+}
 
+console.log(isEqual('hello', 'hello'));
 /*
  * #7
  * Function - notEqual
@@ -114,6 +148,14 @@ console.log('test';)
  * Console.log your result.
 */
 
+function notEqual(first, second){
+  if (first !== second){
+    return "opposites do attract.";
+  }else{
+    return "Cause it's like you're my mirror";
+  }
+}
+console.log(notEqual('hi', 'bye'));
 
 /*
  * #8
@@ -127,7 +169,14 @@ console.log('test';)
  * Console.log your result.
 */ 
 
-
+function spareChange(money){
+  if (money > 100){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log(spareChange(40));
 
 /*
  * #9
@@ -143,6 +192,15 @@ console.log('test';)
  * Console.log your result.
 */ 
 
+function dirty30(one, two, three){
+  var sum = one + two + three
+  if (sum > 30){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log("dirty 30:", dirty30(11, 11, 11));
 
 
 /*
@@ -157,8 +215,14 @@ console.log('test';)
  * Console.log your result.
 */ 
 
-
-
+function evenStevens(num){
+  if (num % 2 === 0){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log('even number:', evenStevens(10));
 
 /*
  * #11
@@ -172,7 +236,14 @@ console.log('test';)
  * If BOTH values are 21 or over, the function will return the message: "Welcome to the Legends Lounge." Otherwise, it will return the message: "Chuck E Cheese is across the street."
  * Console.log your result.
 */ 
-
+function daClub(cover, age){
+  if (cover && age >= 21){
+    return 'Welcome to the Legends Lounge';
+  }else{
+    return 'Chuck E Cheese is across the street';
+  }
+}
+console.log(daClub(23, 20));
 
 /*
  * #12
@@ -186,8 +257,14 @@ console.log('test';)
  * If EITHER the credits value is greater than or equal to 120 or the grades value is greater than or equal to 2.0, then the function will return the message: "Congratulations on a job well done." Otherwise, return the message: "See you in summer school."
  * Console.log your result.
 */ 
-
-
+function graduation(credits, grades){
+  if (credits >= 120 || grades >= 2.0){
+    return 'Congratulations on a job well done.';
+  }else{
+    return 'See you in summer school'
+  }
+}
+console.log(graduation(120, 2.1));
 
 /*
  * #13
@@ -201,7 +278,16 @@ console.log('test';)
  * Console.log your result.
 */ 
 
-
+function moneyTrain(speed){
+  if (speed < 50){
+    return "You are riding Honolulu's Rail";
+  }else if (speed < 50){
+    return "You are riding the Amtrak.";
+  }else{
+    return "Now you ballin' in the Shinkansen!"; 
+  }
+}
+console.log(moneyTrain(90));
 /*
  * #14
  * Function - buyDoughnut
@@ -216,12 +302,51 @@ console.log('test';)
  * Console.log budget and doughnutBought again.
 */ 
 
+var budget = 25;
+var doughnutPrice = 5;
+var doughnutBought = 0;
+
+function buyDoughnut(){
+if (budget >= doughnutPrice){
+ return budget -= doughnutPrice;
+  doughnutBought ++;
+  }
+}
+
+console.log(budget);
+console.log(doughnutBought);
+
 /*Final Boss*/
 /*Create a function name dailySpecials which takes in a parameter: `special`.
 Inside the function, create a switch statement that will check the daily specials of your favorite restaurant (or make up your own daily specials for each day of the week.*/
 
-
-
+function dailySpecials(special){
+  switch (special){
+  case 'Monday':
+    menu = "fish + rice";
+    break;
+  case 'Tuesday':
+    menu = "sandwhiches";
+    break;
+  case 'Wednesday': 
+    menu = 'tacos + salad';
+    break;
+  case 'Thursday':
+    menu = 'pasta';
+    break;
+  case 'Friday':
+    menu = 'pancakes';
+    break;
+  case 'saturday':
+    menu = 'poke bowls'
+    break;
+  case 'sunday':
+    menu = 'veggie burgers';
+    break;
+  }
+  return menu;
+}
+console.log(dailySpecials('sunday'));
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
 
